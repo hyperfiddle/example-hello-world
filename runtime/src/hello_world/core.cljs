@@ -1,5 +1,6 @@
 (ns hello-world.core
-  (:require [hypercrud.client.core :as hc]
+  (:require [cljs.pprint :refer [pprint]]
+            [hypercrud.client.core :as hc]
             [hypercrud.types.DbVal :refer [->DbVal]]
             [hypercrud.types.QueryRequest :refer [->QueryRequest]]
             [hypercrud.types.URI :refer [->URI]]))
@@ -20,4 +21,5 @@
           (map (fn [relation]
                  (let [post (get relation "?post")]
                    [:li {:key (:db/id post)}
-                    (:post/title post)]))))]))
+                    [:pre
+                     (with-out-str (pprint post))]]))))]))
