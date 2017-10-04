@@ -1,7 +1,6 @@
-# hello-world
+# example-hello-world
 
-Like most web apps, hello-world is split into two modules,
-a [service](#service) layer for storing and accessing application data and a [ui runtime](#runtime).
+This is the simplest possible Hypercrud application, it uses only the I/O client to talk to a Hypercrud service, bring your own UI code.
 
 ## Service
 
