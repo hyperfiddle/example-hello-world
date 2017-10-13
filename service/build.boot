@@ -19,7 +19,7 @@
 (require 'boot.lein)
 
 (task-options!
-  pom {:project 'com.hyperfiddle/hello-world-service
+  pom {:project 'com.hyperfiddle.hello-world/service
        :version "0.0.1-SNAPSHOT"}
   aot {:namespace '#{hello-world.main}}
   jar {:main 'hello-world.main})
