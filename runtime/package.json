@@ -3,9 +3,9 @@
   "repository": "https://github.com/hyperfiddle/example-hello-world",
   "license": "EPL-1.0",
   "dependencies": {
-    "bluebird": "3.3.4",
-    "react": "15.4.0",
-    "react-dom": "15.4.0"
+    "react": "15.6.2",
+    "react-addons-create-fragment": "15.6.2",
+    "react-dom": "15.6.2"
   },
   "devDependencies": {
     "webpack": "^1.11.0"

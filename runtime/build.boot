@@ -4,11 +4,11 @@
    :dependencies '[[com.hyperfiddle/hypercrud.browser "0.2.0-SNAPSHOT"]
                    [com.hyperfiddle/hypercrud.platform.browser "0.2.0-SNAPSHOT"]
                    [funcool/promesa "1.8.1"]
-                   [org.clojure/clojurescript "1.9.473"]
-                   [reagent "0.6.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]]
+                   [org.clojure/clojurescript "1.9.946"]
+                   [reagent "0.7.0" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server cljsjs/create-react-class]]
 
                    ; build/test/dev
-                   [adzerk/boot-cljs "1.7.228-1" :scope "test"]
+                   [adzerk/boot-cljs "2.1.4" :scope "test"]
                    [sparkfund/boot-lein-generate "0.3.0" :scope "test"]]})
 
 (apply set-env! (mapcat identity global-conf))

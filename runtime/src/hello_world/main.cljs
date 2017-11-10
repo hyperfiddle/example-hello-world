@@ -2,7 +2,7 @@
   (:require [hello-world.core :as app]
             [hypercrud.client.http :as http]
             [hypercrud.client.peer :as peer]
-            [hypercrud.types.DbError :refer [DbError]]
+            [hypercrud.types.Err :refer [Err]]
             [hypercrud.types.URI :refer [->URI]]
             [hypercrud.util.core :refer [pprint-str]]
             [promesa.core :as p]
@@ -25,12 +25,12 @@
        [:h2 "Network error"]
        [:pre (pprint-str http-error)]]
 
-      (some #(instance? DbError %) (vals ptm))
+      (some #(instance? Err %) (vals ptm))
       [:div
        [:h2 "Errors"]
        [:ul
         (->> ptm
-             (filter (fn [[req resp]] (instance? DbError resp)))
+             (filter (fn [[req resp]] (instance? Err resp)))
              (map (fn [[req error]]
                     (let [error (peer/human-error error req)]
                       [:li {:key (hash req)}
